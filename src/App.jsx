@@ -1,27 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
 
-import { CardComponent } from './Components/CardComponent/index.jsx';
+import { NavBar } from './Components/navbar.jsx';
 
-const CardProduct = () => {
-  const product = [
-    {id:1, name: 'Nike', price: 9999},
-    {id: 2, name: "Puma", price: 8000}
-  ]
+const BarraMenu = () => {
     return (
     <div className="App">
-      <header className="App-header bg-dark">
-        <h1>Lola Games</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <input type="hidden"/>
-        <div style={{ backgroundColor:  "#eeeeee"}}></div>
-        <hr />
-        <br />
-        <CardComponent producto={product[0]} title={'Hola'}/>
+      <header className="App-header">
+        <h1 className="title">Lola Games</h1>
+        {/* <img src="./src/logo-lolagames.png" className="App-logo" alt="logo" /> */}
+        <NavBar />
       </header>
     </div>
   )
 }
 
-export default CardProduct;
+export default BarraMenu;
