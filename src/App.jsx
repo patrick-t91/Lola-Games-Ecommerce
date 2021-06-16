@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
+import { NavBar } from './Components/NavBar/index.jsx'
+import { ItemListContainer } from './Containers/ItemListContainer/ItemListContainer.jsx'
 
-import { NavBar } from './Components/navbar.jsx';
-
-const BarraMenu = () => {
+const App = () => {
     return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +11,9 @@ const BarraMenu = () => {
         {/* <img src="./src/logo-lolagames.png" className="App-logo" alt="logo" /> */}
         <NavBar />
       </header>
+      <ItemListContainer />
     </div>
   )
 }
 
-export default BarraMenu;
+export default App;
