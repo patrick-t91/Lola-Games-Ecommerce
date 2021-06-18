@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App-header {
+  background-color: #010305;
+}
+
+.title {
+  font-family: 'Shrikhand', cursive;
+  color: #c23616;
+  background-image: linear-gradient(#f5f6fa, #a84949) ;
+  padding-left: 0.5em;
+}
+
+.navmenu {
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-column: 1/2;
+}
+
+.navinput {
+  grid-column: 2/3;
+  margin-bottom: 0;
+}
+
+.navlist a {
+  text-decoration: none;
+  font-family: 'Viaoda Libre', cursive;
+  font-size: 1.7em;
+  color: #f5f6fa;
+}
+
