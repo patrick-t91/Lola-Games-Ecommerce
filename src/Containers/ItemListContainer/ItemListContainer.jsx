@@ -1,4 +1,5 @@
 import { ItemCount } from '../../Components/ItemCount'
+import { ItemList } from '../../Components/ItemList/ItemList.jsx'
 
 export const ItemListContainer = () => {
             const onAdd = (cantidad) => {
@@ -10,6 +11,7 @@ export const ItemListContainer = () => {
                 productos, con su imagen e información (nombre, marca, precio, etc.)
             </h1>
             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+            <ItemList />
         </>
     )
 }

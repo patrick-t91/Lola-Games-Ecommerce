@@ -1,0 +1,19 @@
+[   { 
+    "id": 1,
+    "producto": "Parlante Bluetooth WSA-847",
+    "precio": 1899, 
+    "img": "../product1.jpeg"
+    },
+    { 
+    "id": 2,
+    "producto": "Pendrive Sandisk 16GB Nuevo",
+    "precio": 749,
+    "img": "../product2.jpeg"
+    },
+    {
+    "id": 3,
+    "producto": "Joystick PS2 DualShock Seisa: Analógico y con botones programables",
+    "precio": 1499,
+    "img": "../product3.jpeg"
+    }
+]
