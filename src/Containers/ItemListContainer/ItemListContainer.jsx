@@ -1,7 +1,29 @@
 import { ItemCount } from '../../Components/ItemCount'
 import { ItemList } from '../../Components/ItemList/ItemList.jsx'
+import { useState, useEffect } from 'react';
+
 
 export const ItemListContainer = () => {
+    const [productos, setProductos] = useState([])
+
+    useEffect( () => {
+        async function getData () {
+            const response = await fetch ("./products.json") 
+            const data = await response.json();
+            setProductos(data)
+        }
+        setProductos(getData());
+        return () => {
+        }
+    }, [])
+    
+    return (
+        <div>
+            <ItemList productos={ }/>
+        </div>
+    )     
+
+
             const onAdd = (cantidad) => {
                 alert(`Has agregado ${cantidad} productos al carrito`)
             }
