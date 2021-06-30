@@ -1,4 +1,4 @@
-// import { ItemList } from '../../Components/ItemList/ItemList.jsx'
+import { ItemList } from '../../Components/ItemList/ItemList.jsx'
 import { useState, useEffect } from 'react';
 
 
@@ -17,9 +17,6 @@ export const ItemListContainer = () => {
     console.log(productos)
 
     return (
-        <div>
-            {productos.length}
-            {productos[0].precio}
-        </div>
+        <ItemList productos={productos}/>
     )    
 }

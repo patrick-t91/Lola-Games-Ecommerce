@@ -1,14 +1,14 @@
-// import { Item } from '../Item/Item.jsx'
+import { Item } from '../Item/Item.jsx'
 
 
 export const ItemList = ({productos}) => {
-    console.log (productos)
-    productos.map(element => {
-        return (
-            <div>
-                <h2>{element.producto}</h2>
-            </div>
-        )
-        
-    })
+    return (
+        productos.map (elemento => {
+            return (
+                <span key={elemento.id}>
+                    <Item item={elemento}/>
+                </span>
+            )
+        }) 
+    )
 }
