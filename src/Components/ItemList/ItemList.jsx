@@ -1,17 +1,14 @@
-// import { Item } from './Item.jsx'
-import '../../products.json'
+// import { Item } from '../Item/Item.jsx'
 
-export const ItemList = () => {
-    async function getData () {
-    const response = await fetch ("../../products.json") 
-    const data = await response.json();
-    return (data)
-        }
-    console.log(getData())
 
-    return (
-        <div>
-            
-        </div>
-    )
+export const ItemList = ({productos}) => {
+    console.log (productos)
+    productos.map(element => {
+        return (
+            <div>
+                <h2>{element.producto}</h2>
+            </div>
+        )
+        
+    })
 }

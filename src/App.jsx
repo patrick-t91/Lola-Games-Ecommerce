@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { NavBar } from './Components/NavBar/index.jsx'
+import { NavBar } from './Components/NavBar/Index.jsx'
 import { ItemListContainer } from './Containers/ItemListContainer/ItemListContainer.jsx'
 
 const App = () => {
