@@ -1,13 +1,13 @@
 import { Item } from '../Item/Item.jsx'
-
+import './estilos.css'
 
 export const ItemList = ({productos}) => {
     return (
         productos.map (elemento => {
             return (
-                <span key={elemento.id}>
+                <div key={elemento.id} className="layout">
                     <Item item={elemento}/>
-                </span>
+                </div>
             )
         }) 
     )

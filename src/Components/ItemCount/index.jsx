@@ -16,7 +16,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
         <>
             <div className="text-center margin mb-2">
                 <button onClick={() => {counter > initial ? substractHandler() : doNothing() }}>-</button>
-                    <span className="border border-dark border-2 margin ms-1 me-1 padding p-1">Cantidad de productos en el carrito: {counter}</span>
+                    <span className="border border-dark border-2 margin ms-1 me-1 padding p-1 bg-light">Cantidad de productos en el carrito: {counter}</span>
                 <button onClick={() => {stock > counter ? addHandler () : alert("No hay más stock disponible de este producto")}}>+</button>
             </div>
             <div className="text-center">

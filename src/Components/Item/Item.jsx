@@ -1,4 +1,5 @@
 import { ItemCount } from '../ItemCount'
+import './estilos.css'
 
  export const Item = ({item}) => {
     const onAdd = (cantidad) => {
@@ -6,12 +7,13 @@ import { ItemCount } from '../ItemCount'
     }
 return (
 <>
-    <li key={item.id}>
+    <div key={item.id} className="itemclass">
         <h2>{item.producto}</h2>
-        <h3>{item.precio}</h3>
-        <img src={item.img} alt="imagen-producto" />
-    </li>
-    <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+        <img src={item.img} alt="imagen-producto" className="img-productos"/>
+        <h3>Precio: $ {item.precio}</h3>
+        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+    </div>
+    
 </>
 )
  }
