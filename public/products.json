@@ -2,18 +2,24 @@
     "id": 1,
     "producto": "Parlante Bluetooth WSA-847",
     "precio": 1899, 
-    "img": "../product1.jpeg"
+    "img": "../product1.jpeg",
+    "stock": 6,
+    "descripcion": "Potencia 10W, entrada USB y micro SD. Reproducción Bluetooth. Radio. Medidas: 21cm de largo x 8cm de alto."
     },
     { 
     "id": 2,
     "producto": "Pendrive Sandisk 16GB Nuevo",
     "precio": 749,
-    "img": "../product2.jpeg"
+    "img": "../product2.jpeg",
+    "stock": 10,
+    "descripcion": "Nuevo. Útil para múltiples usos. Lleva tus archivos más importantes a todos lados gracias a su diseño minimalista."
     },
     {
     "id": 3,
     "producto": "Joystick PS2 DualShock Seisa",
     "precio": 1499,
-    "img": "../product3.jpeg"
+    "img": "../product3.jpeg",
+    "stock": 8,
+    "descripcion": "Joystick analógico y con botones programables para potenciar tu experiencia de juego. Compatible también con PS1!"
     }
 ]

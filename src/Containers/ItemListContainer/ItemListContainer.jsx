@@ -7,7 +7,7 @@ export const ItemListContainer = () => {
 
     useEffect( () => {
         const getData = async () => {
-            const response = await fetch("./products.json")
+            const response = await fetch("/products.json")
             const data = await response.json()
             setProductos (data)
         }   
@@ -15,7 +15,7 @@ export const ItemListContainer = () => {
     }, [])
     
     console.log(productos)
-
+    
     return (
         <ItemList productos={productos}/>
     )    

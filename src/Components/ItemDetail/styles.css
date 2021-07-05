@@ -1,0 +1,14 @@
+* {
+    font-family: 'Rufina', serif;;
+}
+
+.itemClass {
+    background-image: linear-gradient(#f5f6fa, #a84949);
+    max-width: 100%;
+    width: 70%;
+}
+
+.itemDescription {
+   display: grid;
+}
+
