@@ -9,27 +9,26 @@ import './styles.css'
     console.log(item)
     
     return (
-    <>
-        <div className="itemClass container border border-dark border-2">
-            <div className="row">
-                <div className="col">
-                    <img src={item && item.img} alt="imagen-producto" className="img-productos img-fluid"/>
-                </div>
-                <div className="col itemDescription p-2">
-                    <h2>{item && item.producto}</h2>
-                    <p className="fs-4">Precio: $ {item && item.precio}</p>
-                    <p className="fs-4">Stock: {item && item.stock} unidades</p>
-                    <div className="border border-dark border-1 mb-2">
-                        <h3>Características del producto</h3>
-                        <p>{item && item.descripcion}</p>
+        <>
+            <div className="itemClass container border border-dark border-2">
+                <div className="row">
+                    <div className="col">
+                        <img src={item.img} alt="imagen-producto" className="img-productos img-fluid"/>
                     </div>
-                    
-                    <div>
-                        <ItemCount stock={item && item.stock} initial={1} onAdd={onAdd}/>
-                    </div> 
+                    <div className="col itemDescription p-2">
+                        <h2>{item.producto}</h2>
+                        <p className="fs-4">Precio: $ {item.precio}</p>
+                        <p className="fs-4">Stock: {item.stock} unidades</p>
+                        <div className="border border-dark border-1 mb-2">
+                            <h3>Características del producto</h3>
+                            <p>{item.descripcion}</p>
+                        </div>
+                        <div>
+                            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                        </div> 
+                    </div>
                 </div>
             </div>
-        </div>
-    </>
-    )
+        </>
+        )
 }

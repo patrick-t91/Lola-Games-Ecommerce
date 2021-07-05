@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 export const ItemDetailContainer = () => {
-    let [item, setItem] = useState()
+    let [item, setItem] = useState({})
 
     useEffect( () => {
         const getItems = async () => {
@@ -14,6 +14,7 @@ export const ItemDetailContainer = () => {
         getItems()
     }, [])
 
+    console.log(item)
 
     return (
         <>
