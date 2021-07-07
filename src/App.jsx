@@ -1,21 +1,28 @@
 import React from 'react';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from './Components/NavBar'
-// import { ItemListContainer } from './Containers/ItemListContainer/ItemListContainer.jsx'
+import { ItemListContainer } from './Containers/ItemListContainer/ItemListContainer.jsx'
 import { ItemDetailContainer } from './Containers/ItemDetailContainer'
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Footer } from './Components/Footer'
 
 const App = () => {
     return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="title">Lola Games</h1>
-        {/* <img src="./src/logo-lolagames.png" className="App-logo" alt="logo" /> */}
-        <NavBar />
-      </header>
-      {/* <ItemListContainer /> */}
-      <ItemDetailContainer />
-    </div>
+      <BrowserRouter>
+          <header className="App-header p-2">
+            <NavBar />
+            <div>
+              
+              <h1 className="title text-center">Lola Games</h1>
+            </div> 
+          </header>
+          <Switch>
+            <Route exact path="/" component={ItemListContainer}/>
+            <Route exact path="/categories/:id" component={ItemDetailContainer}/>
+          </Switch> 
+          <Footer /> 
+      </BrowserRouter> 
   )
 }
 
