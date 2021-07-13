@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { CartWidget } from '../CartWidget/CartWidget.jsx'
 import './styles.css'
 import logo from '../../media/logo-lola-games.png'
@@ -8,9 +9,9 @@ export const NavBar = () => {
         <nav className="navmenu"> 
             <img src={logo} className="App-logo" alt="logo" />
             <ul className="navlist">
-                <li><a href="#products">Productos</a></li>
-                <li><a href="#aboutus">Acerca de Nosotros</a></li>
-                <li><a href="#contactus">Contactanos</a></li>
+                <li><Link to={'/'}>Productos </ Link></li>
+                <li><Link to={'/categories'}> Acerca de nosotros</Link></li>
+                <li><Link >Contactanos</Link></li>
             </ul>
             <CartWidget />
         </nav>
