@@ -13,13 +13,13 @@ const App = () => {
           <header className="App-header p-2">
             <NavBar />
             <div>
-              
               <h1 className="title text-center">Lola Games</h1>
             </div> 
           </header>
           <Switch>
             <Route exact path="/" component={ItemListContainer}/>
-            <Route path="/categories" component={ItemDetailContainer}/>
+            <Route path="/category/:id" component={ItemListContainer}/>
+            <Route path="/item/:id" component={ItemDetailContainer}/>
           </Switch> 
           <Footer /> 
       </BrowserRouter> 

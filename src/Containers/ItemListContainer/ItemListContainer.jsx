@@ -14,8 +14,6 @@ export const ItemListContainer = () => {
         getData()
     }, [])
     
-    console.log(productos)
-    
     return (
         <ItemList productos={productos}/>
     )    

@@ -7,11 +7,17 @@ export const NavBar = () => {
     return ( 
     <>
         <nav className="navmenu"> 
-            <img src={logo} className="App-logo" alt="logo" />
             <ul className="navlist">
-                <li><Link to={'/'}>Productos </ Link></li>
-                <li><Link to={'/categories'}> Acerca de nosotros</Link></li>
-                <li><Link >Contactanos</Link></li>
+                <li><Link to={"/"}><img src={logo} className="App-logo" alt="logo" /></Link></li>
+                <li> <Link to={'/category/juegos'}>Juegos</ Link></li>
+                <li> <Link to={'/category/accesorios'}>Accesorios</ Link></li>                   
+                <li><Link to={'/category/equipos'}>Equipos</ Link></li>    
+                <div className="text-end">
+                    <ul>
+                        <li><Link to={'/categories'}> Acerca de nosotros</Link></li>
+                        <li><Link >Contactanos</Link></li>
+                    </ul>
+                </div>   
             </ul>
             <CartWidget />
         </nav>

@@ -5,6 +5,7 @@ import './styles.css'
     const onAdd = (cantidad) => {
         alert(`Has agregado ${cantidad} productos al carrito`)
     }
+    console.log(item)
     return (
         <>
             <div className="itemClass container border border-dark border-2">
@@ -27,5 +28,8 @@ import './styles.css'
                 </div>
             </div>
         </>
-        )
+    )
 }
+            
+      
+
