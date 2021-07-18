@@ -4,22 +4,28 @@
     "precio": 1899, 
     "img": "../product1.jpeg",
     "stock": 6,
-    "descripcion": "Potencia 10W, entrada USB y micro SD. Reproducción Bluetooth. Radio. Medidas: 21cm de largo x 8cm de alto."
-    },
+    "descripcion": "Potencia 10W, entrada USB y micro SD. Reproducción Bluetooth. Radio. Medidas: 21cm de largo x 8cm de alto.",
+    "categoria": "equipos",
+    "categoryId": "3"    
+},
     { 
     "id": 2,
     "producto": "Pendrive Sandisk 16GB Nuevo",
     "precio": 749,
     "img": "../product2.jpeg",
     "stock": 10,
-    "descripcion": "Nuevo. Útil para múltiples usos. Lleva tus archivos más importantes a todos lados gracias a su diseño minimalista."
-    },
+    "descripcion": "Nuevo. Útil para múltiples usos. Lleva tus archivos más importantes a todos lados gracias a su diseño minimalista.",
+    "categoria": "equipos",
+    "categoryId": "3"       
+},
     {
     "id": 3,
     "producto": "Joystick PS2 DualShock Seisa",
     "precio": 1499,
     "img": "../product3.jpeg",
     "stock": 8,
-    "descripcion": "Joystick analógico y con botones programables para potenciar tu experiencia de juego. Compatible también con PS1!"
-    }
+    "descripcion": "Joystick analógico y con botones programables para potenciar tu experiencia de juego. Compatible también con PS1!",
+    "categoria": "accesorios",
+    "categoryId": "2"       
+}
 ]

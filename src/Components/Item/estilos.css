@@ -1,7 +1,9 @@
 .itemclass {
+    text-decoration: none;
     background-image: linear-gradient(#f5f6fa, #a84949);
     border: 1.5px solid black;
     margin: 2em;
+    padding: 1em;
 }
 
 .img-productos {

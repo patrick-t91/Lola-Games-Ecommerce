@@ -9,12 +9,16 @@ import './estilos.css'
     }
     return (
         <>
+        <Link to={`/item/${item.id}`}>
             <div key={item.id} className="itemclass"> 
-                <Link to={`/item/${item.id}`}><img src={item.img} alt="imagen-producto" className="img-productos"/></Link>
+                <div className="text-center">
+                     <img src={item.img} alt="imagen-producto" className="img-productos"/>
+                </div>
                 <h2>{item.producto}</h2>
                 <h3>Precio: $ {item.precio}</h3>
                 <ItemCount stock={5} initial={1} onAdd={onAdd}/>
-            </div> 
+            </div>  
+        </Link>
         </>
     )
  }
