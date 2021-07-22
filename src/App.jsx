@@ -1,27 +1,38 @@
 import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { NavBar } from './Components/NavBar'
 import { ItemListContainer } from './Containers/ItemListContainer'
 import { ItemDetailContainer } from './Containers/ItemDetailContainer'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Cart } from './Components/Cart'
 import { Footer } from './Components/Footer'
 
 const App = () => {
+  const [ cartState, setCartState] = useState(false)
+  if (Route.path === '/cart') {
+    setCartState(true)
+  }
+  
     return (
       <BrowserRouter>
-          <header className="App-header p-2">
-            <NavBar />
-            <div>
-              <h1 className="title text-center">Lola Games</h1>
-            </div> 
-          </header>
-          <Switch>
-            <Route exact path="/" component={ItemListContainer}/>
-            <Route path="/category/:categoryId" component={ItemListContainer}/>
-            <Route path="/item/:id" component={ItemDetailContainer}/>
-          </Switch> 
-          <Footer /> 
+        { !cartState ?
+        <header className="App-header p-2">
+        <NavBar />
+        <div>
+          <h1 className="title text-center">Lola Games</h1>
+        </div> 
+      </header>
+      : <div></div>
+      }
+        <Switch>
+          <Route exact path="/" component={ItemListContainer}/>
+          <Route path="/category/:categoryId" component={ItemListContainer}/>
+          <Route path="/item/:id" component={ItemDetailContainer}/>
+          <Route path="/cart" component={Cart}/>
+        </Switch> 
+        <Footer /> 
       </BrowserRouter> 
   )
 }
