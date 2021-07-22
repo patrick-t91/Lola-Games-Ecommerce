@@ -1,4 +1,4 @@
-  import { ItemDetail } from '../../Components/ItemDetail'
+import { ItemDetail } from '../../Components/ItemDetail'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
