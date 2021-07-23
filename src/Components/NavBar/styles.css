@@ -2,26 +2,23 @@
     display: flex;
     justify-content: space-between;
     font-size: small;
-  }
-  
+}
 .navlist {
 list-style: none;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 }
-
 .navinput {
 margin-bottom: 0;
 }
-
 .navlist li {
     padding-right: 1em;
     padding-left: 1em;
 }
 .navlist a {
 text-decoration: none;
-font-family: 'Viaoda Libre', cursive;
+font-family: 'Viaoda Libre', 'cursive';
 font-size: 1.7em;
 color: #f5f6fa;
 }
