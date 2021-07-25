@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { ShopContextComponent } from './Context'
+import { ShopContextComponent } from './Context/ShopContext'
 import { Header } from './Components/Header'
 import { ItemListContainer } from './Containers/ItemListContainer'
 import { ItemDetailContainer } from './Containers/ItemDetailContainer'
