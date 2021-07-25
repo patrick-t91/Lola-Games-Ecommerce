@@ -5,6 +5,7 @@ export const ShopContext = createContext()
 
 export const ShopContextComponent = ({children}) => {
     const [products, setProducts] = useState([])
+    const [cart, setCart] = useState([])
 
     useEffect( () => {
         const getProducts = async () => {
@@ -14,6 +15,10 @@ export const ShopContextComponent = ({children}) => {
         }
         getProducts()    
     }, [])
+    
+    const agregarAlCarrito = () => {
+
+    }
     
     return (
     <ShopContext.Provider value={{products}}>
