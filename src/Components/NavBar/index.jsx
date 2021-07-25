@@ -5,7 +5,6 @@ import logo from '../../media/logo-lola-games.png'
 
 export const NavBar = () => {
     return ( 
-    <>
         <nav className="navmenu"> 
             <ul className="navlist">
                 <li><Link to={"/"}><img src={logo} className="App-logo" alt="logo" /></Link></li>
@@ -16,7 +15,6 @@ export const NavBar = () => {
                 <li><Link >Contactanos</Link></li>
             </ul>
             <CartWidget />
-        </nav>
-    </>     
+        </nav>     
           )
 }

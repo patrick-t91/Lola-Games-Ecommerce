@@ -12,20 +12,7 @@ code {
     monospace;
 }
 
-.App-header {
-  background-color: #010305;
-}
 
-.title {
-  font-family: 'Shrikhand', 'cursive';
-  font-weight: bold;
-  color: #c23616;
-  background-image: linear-gradient(#f5f6fa, #a84949);
-  padding-left: 0.8em;
-  color: #c23616;
-  background-image: linear-gradient(#f5f6fa, #a84949) ;
-  padding-left: 0.5em;
-}
 
 
 
