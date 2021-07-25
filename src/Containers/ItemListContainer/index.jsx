@@ -4,13 +4,13 @@ import { ItemList } from '../../Components/ItemList/ItemList.jsx'
 import { ShopContext } from '../../Context'
 
 export const ItemListContainer = () => {
-    const productos = useContext (ShopContext)
+    const {products}= useContext (ShopContext)
     const  { categoryId } = useParams()
-    console.log(productos)
+ 
     return (
-        <div>hola</div>
-    // <ItemList productos={ categoryId ? 
-    //                     productos.filter(item => item.categoryId === categoryId)
-    //                     : productos}/>
+
+    <ItemList productos={ categoryId ? 
+                        products.filter(item => item.categoryId === categoryId)
+                        : products}/>
     )    
 }

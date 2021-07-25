@@ -8,11 +8,11 @@ export const NavBar = () => {
         <nav className="navmenu"> 
             <ul className="navlist">
                 <li><Link to={"/"}><img src={logo} className="App-logo" alt="logo" /></Link></li>
-                <li><Link to={'/category/1'}>Juegos</ Link></li>
-                <li><Link to={'/category/2'}>Accesorios</ Link></li>                   
-                <li><Link to={'/category/3'}>Equipos</ Link></li>    
-                <li><Link q> Acerca de nosotros</Link></li>
-                <li><Link >Contactanos</Link></li>
+                <li><Link to={'/category/1'} className="link">Juegos</ Link></li>
+                <li><Link to={'/category/2'} className="link">Accesorios</ Link></li>                   
+                <li><Link to={'/category/3'} className="link">Equipos</ Link></li>    
+                <li><Link className="link"> Acerca de nosotros</Link></li>
+                <li><Link className="link">Contactanos</Link></li>
             </ul>
             <CartWidget />
         </nav>     
