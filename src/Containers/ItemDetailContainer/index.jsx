@@ -1,5 +1,5 @@
 import { ItemDetail } from '../../Components/ItemDetail'
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext'
 
@@ -8,13 +8,18 @@ export const ItemDetailContainer = () => {
     const { id } = useParams()
     const [productToShow, setProductToShow] = useState({})
 
-    useEffect (() => {
-        setProductToShow (products.find (product => product.id === parseInt(id)))
+    console.log(id)
+    console.log(products)
+
+    useEffect ( ()  => {
+        
+        const getProductToShow = () => {
+            setProductToShow (products.find (product => product.id === parseInt(id))) 
+        }
+        getProductToShow ()
     }, [id, products])
 
     return (
-        <>
-             <ItemDetail item= {productToShow}/>
-        </>
+        <ItemDetail item= {productToShow}/>
     )    
 }

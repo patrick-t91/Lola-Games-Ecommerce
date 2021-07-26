@@ -11,9 +11,9 @@ import './styles.css'
         }
         alert(`Has agregado ${cantidad} productos al carrito!`)
     }
-    console.log(item)
+
     return (
-        <>
+        !!item &&
             <div className="itemClass container border border-dark border-2">
                 <div className="row">
                     <div className="col">
@@ -35,7 +35,6 @@ import './styles.css'
                     </div>
                 </div>
             </div>
-        </>
     )
 }
             

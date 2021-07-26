@@ -11,8 +11,8 @@ export const NavBar = () => {
                 <li><Link to={'/category/1'} className="link">Juegos</ Link></li>
                 <li><Link to={'/category/2'} className="link">Accesorios</ Link></li>                   
                 <li><Link to={'/category/3'} className="link">Equipos</ Link></li>    
-                <li><Link className="link"> Acerca de nosotros</Link></li>
-                <li><Link className="link">Contactanos</Link></li>
+                <li><Link className="link" to={"/"}> Acerca de nosotros</Link></li>
+                <li><Link className="link" to={"/"}>Contactanos</Link></li>
             </ul>
             <CartWidget />
         </nav>     
