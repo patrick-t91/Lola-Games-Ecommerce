@@ -30,7 +30,7 @@ import './styles.css'
                         <div>
                             {countState ? 
                             <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/> 
-                            : <Link to={'/cart'}><button>Terminar mi compra</button></Link>}
+                            : <Link to={'/cart'}><button>Comprar</button></Link>}
                         </div> 
                     </div>
                 </div>

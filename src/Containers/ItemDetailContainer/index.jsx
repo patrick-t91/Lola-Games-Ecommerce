@@ -12,13 +12,12 @@ export const ItemDetailContainer = () => {
     console.log(products)
 
     useEffect ( ()  => {
-
-        const getProductToShow = () => {
-            setProductToShow (products.find (product => product.id === parseInt(id))) 
-        }
-        getProductToShow ()
+            const getProductToShow = () => {
+                setProductToShow (products.find (product => product.id === parseInt(id))) 
+            }
+            getProductToShow ()
     }, [id, products])
-
+    
     return (
         <ItemDetail item= {productToShow}/>
     )    
