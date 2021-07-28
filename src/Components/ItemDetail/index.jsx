@@ -1,17 +1,12 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ItemCount } from '../ItemCount'
+import { CartContext } from '../../Context/CartContext'
 import './styles.css'
 
  export const ItemDetail = ({item}) => {
-    const [ countState, setCountState ] = useState(true)
-    const onAdd = (cantidad) => {
-        if (countState === true) {
-            setCountState(false)
-        }
-        alert(`Has agregado ${cantidad} productos al carrito!`)
-    }
-
+    const {addItem, countState, setCountState, quantity} = useContext(CartContext)
+    
     return (
         !!item &&
             <div className="itemClass container border border-dark border-2">
@@ -29,8 +24,9 @@ import './styles.css'
                         </div>
                         <div>
                             {countState ? 
-                            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/> 
-                            : <Link to={'/cart'}><button>Terminar mi compra</button></Link>}
+                            <ItemCount stock={item.stock} initial={1} addItem= {() => {addItem(item, quantity)}} item={item}/> 
+                            : <Link to={'/cart'}><button onClick={() => {setCountState(false)}}>Terminar compra</button></Link>
+                              }
                         </div> 
                     </div>
                 </div>
