@@ -5,7 +5,7 @@ import { CartContext } from '../../Context/CartContext'
 import './styles.css'
 
  export const ItemDetail = ({item}) => {
-    const {addItem, countState, setCountState} = useContext(CartContext)
+    const {addItem, countState} = useContext(CartContext)
     
     return (
         !!item &&

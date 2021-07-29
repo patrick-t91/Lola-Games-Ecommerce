@@ -27,6 +27,10 @@ export const CartContextComponent = ({children}) => {
         }
     }
 
+    useEffect (() => {
+            setCountState(true)
+    }, [])
+
     const removeItem = (itemId) => {
         let itemDeleted = cart.find(element => element.item.id === itemId)
         cart.splice(cart.indexOf(itemDeleted), 1)
@@ -36,7 +40,7 @@ export const CartContextComponent = ({children}) => {
         setCart([])
     }
 
-    useEffect( () => {
+    useEffect ( () => {
         let price = 0;
             for (let item of cart) {
                     price = item.price++
