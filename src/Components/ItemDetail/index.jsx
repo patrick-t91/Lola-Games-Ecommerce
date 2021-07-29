@@ -25,7 +25,7 @@ import './styles.css'
                         <div>
                             {countState ? 
                             <ItemCount stock={item.stock} initial={1} addItem= {addItem} item={item}/> 
-                            : <Link to={'/cart'}><button onClick={() => {setCountState(true)}}>Terminar compra</button></Link>
+                            : <Link to={'/cart'}>Terminar compra</Link>
                               }
                         </div> 
                     </div>
