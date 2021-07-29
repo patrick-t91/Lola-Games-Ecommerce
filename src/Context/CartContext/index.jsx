@@ -7,20 +7,28 @@ export const CartContext = createContext()
 export const CartContextComponent = ({children}) => {
     const [cart, setCart] = useState([])
     const [price, setPrice] = useState (0)
-    const [countState, setCountState ] = useState(true)
+    const [countState, setCountState] = useState(true)
 
     const addItem = (item, quantity) => {
+        const producto = cart.find (element => element.item.id === item.id);
+        if (producto) {
+            let cartAux = [...cart]; 
+            cartAux.producto.quantity += quantity;
+            setCart(cartAux);
+        } else {
+            const cartAux = [...cart, {
+                item,
+                quantity,
+            }];
+            setCart(cartAux);
+        }
         if (countState) {
             setCountState(false)
         }
-        alert(`Has agregado ${quantity} productos al carrito!`);
-        cart.find ((element) => element.item.id) ? 
-            setCart([...cart, {...item, quantity}])
-            : setCart([...cart, {item, quantity}])  
     }
 
     const removeItem = (itemId) => {
-        let itemDeleted = cart.find((element) => element.item.id === itemId)
+        let itemDeleted = cart.find(element => element.item.id === itemId)
         cart.splice(cart.indexOf(itemDeleted), 1)
     }
 
@@ -29,16 +37,13 @@ export const CartContextComponent = ({children}) => {
     }
 
     useEffect( () => {
-        const calculatePrice = () => {
-            let price = 0
+        let price = 0;
             for (let item of cart) {
-                    price = item.quantity++
+                    price = item.price++
                 }
             return (
                 setPrice(price)
             )    
-        }    
-       calculatePrice()
     }, [cart])
     
     return (
