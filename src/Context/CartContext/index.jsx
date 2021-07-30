@@ -3,18 +3,21 @@ import { useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 
-
 export const CartContextComponent = ({children}) => {
     const [cart, setCart] = useState([])
     const [price, setPrice] = useState (0)
     const [cartLength, setCartLength] = useState(0)
     const [countState, setCountState] = useState(true)
 
+    const handleCountState = () => {
+        setCountState(!countState)
+    }
+
     const addItem = (item, quantity) => {
-        const producto = cart.find (element => element.item.id === item.id);
+        const producto = cart.find (element => element.item === item);
         if (producto) {
             let cartAux = [...cart]; 
-            cartAux.producto.quantity += quantity;
+            cartAux.producto.quantity+= quantity;
             setCart(cartAux);
         } else {
             const cartAux = [...cart, {
@@ -23,9 +26,7 @@ export const CartContextComponent = ({children}) => {
             }];
             setCart(cartAux);
         }
-        if (countState) {
-            setCountState(false)
-        } 
+        handleCountState()
     }
 
     const removeItem = (item) => {
@@ -40,7 +41,7 @@ export const CartContextComponent = ({children}) => {
     useEffect ( () => {
         let price = 0
         for (let producto of cart) {
-                price += producto.item.precio
+                price += producto.item.precio*producto.quantity
             }
         return (
             setPrice(price)
@@ -60,7 +61,7 @@ export const CartContextComponent = ({children}) => {
     useEffect ( () => {
         setCountState(true)
     }, [])
-    
+
     return (
     <CartContext.Provider value={{cart, price, cartLength, countState, addItem, removeItem, clearCart}}>
         {children}

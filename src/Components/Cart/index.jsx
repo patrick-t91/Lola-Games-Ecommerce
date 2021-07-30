@@ -12,8 +12,8 @@ export const Cart = () => {
                     <>
                         <div>Producto: {element.item.producto}</div>
                         <div>Cantidad: {element.quantity}</div>
-                        <button onClick={() => {removeItem(element.item)}}>Eliminar producto</button>
                         <div><Link to={`item/${element.item.id}`}>Ver producto</Link></div>
+                        <button onClick={() => {removeItem(element.item)}}>Eliminar producto</button>
                     </>)}
                 )
             }
