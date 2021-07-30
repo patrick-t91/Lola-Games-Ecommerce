@@ -25,7 +25,10 @@ import './styles.css'
                         <div>
                             {countState ? 
                             <ItemCount stock={item.stock} initial={1} addItem= {addItem} item={item}/> 
-                            : <Link to={'/cart'}>Terminar compra</Link>
+                            : 
+                            <><Link to={'/cart'}>Finalizar compra</Link>
+                            <Link to={`/category/${item.categoryId}`}>Ver productos similares</Link>
+                            </>
                               }
                         </div> 
                     </div>
