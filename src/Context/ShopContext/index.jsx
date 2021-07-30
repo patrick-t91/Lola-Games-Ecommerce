@@ -5,7 +5,6 @@ export const ShopContext = createContext()
 
 export const ShopContextComponent = ({children}) => {
     const [products, setProducts] = useState([]) 
-    // const [cart, setCart] = useState([])
 
     useEffect( () => {
         const getProducts = async () => {
