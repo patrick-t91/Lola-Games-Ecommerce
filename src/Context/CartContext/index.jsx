@@ -13,6 +13,7 @@ export const CartContextComponent = ({children}) => {
         const producto = cart.find (element => element.item === item);
         if (producto) {
             producto.quantity+= quantity;
+            setCart([...cart])
         } else {
             const cartAux = [...cart, {
                 item,
@@ -51,10 +52,6 @@ export const CartContextComponent = ({children}) => {
             setCartLength(cartLength)
         )
     }, [cart])
-
-    useEffect ( () => {
-        setCountState(true)
-    }, [])
 
     return (
     <CartContext.Provider value={{cart, price, cartLength, countState, setCountState, addItem, removeItem, clearCart}}>

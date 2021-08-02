@@ -1,6 +1,22 @@
 import './styles.css'
-import cart from '../../media/cart.png'
+import cartLogo from '../../media/cart.png'
+import { useContext } from 'react';
+import { CartContext } from '../../Context/CartContext'
 
 export const CartWidget = () => {
-    return <img src={cart} alt="carrito" />          
+    const { cartLength } = useContext(CartContext)
+
+    return (
+        <>
+        {cartLength > 0 ? 
+            <div >
+                <img src={cartLogo} alt="carrito"/>
+                <h3 className="bg-light text-center">{cartLength}</h3>
+            </div> 
+            : null
+            }
+        </>
+
+               
+    )
 }
