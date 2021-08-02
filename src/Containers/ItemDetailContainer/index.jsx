@@ -8,9 +8,6 @@ export const ItemDetailContainer = () => {
     const { id } = useParams()
     const [productToShow, setProductToShow] = useState({})
 
-    console.log(id)
-    console.log(products)
-
     useEffect ( ()  => {
         const getProductToShow = () => {
             setProductToShow (products.find (product => product.id === parseInt(id))) 

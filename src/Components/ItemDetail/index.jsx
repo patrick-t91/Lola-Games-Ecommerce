@@ -5,7 +5,7 @@ import { CartContext } from '../../Context/CartContext'
 import './styles.css'
 
  export const ItemDetail = ({item}) => {
-    const {addItem, countState} = useContext(CartContext)
+    const {addItem, countState, setCountState} = useContext(CartContext)
     
     return (
         !!item &&
@@ -27,8 +27,8 @@ import './styles.css'
                         <ItemCount stock={item.stock} initial={1} addItem= {addItem} item={item}/> 
                         : 
                         <>
-                            <Link to={'/cart'}>Finalizar compra</Link>
-                            <Link to={`/category/${item.categoryId}`}>Ver productos similares</Link>
+                            <Link to={'/cart'} onClick={() => {setCountState(true)}}>Finalizar compra</Link>
+                            <Link to={`/category/${item.categoryId}`} onClick={() => {setCountState(true)}}>Ver productos similares</Link>
                         </>
                             }
                     </div> 

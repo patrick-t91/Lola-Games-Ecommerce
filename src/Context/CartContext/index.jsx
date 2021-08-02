@@ -12,9 +12,7 @@ export const CartContextComponent = ({children}) => {
     const addItem = (item, quantity) => {
         const producto = cart.find (element => element.item === item);
         if (producto) {
-            let cartAux = [...cart]; 
-            cartAux.producto.quantity+= quantity;
-            setCart(cartAux);
+            producto.quantity+= quantity;
         } else {
             const cartAux = [...cart, {
                 item,
@@ -59,7 +57,7 @@ export const CartContextComponent = ({children}) => {
     }, [])
 
     return (
-    <CartContext.Provider value={{cart, price, cartLength, countState, addItem, removeItem, clearCart}}>
+    <CartContext.Provider value={{cart, price, cartLength, countState, setCountState, addItem, removeItem, clearCart}}>
         {children}
     </CartContext.Provider>
     )
