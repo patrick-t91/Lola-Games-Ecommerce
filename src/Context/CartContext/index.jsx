@@ -9,6 +9,7 @@ export const CartContextComponent = ({children}) => {
     const [cartLength, setCartLength] = useState(0)
     const [countState, setCountState] = useState(true)
 
+    // Agregar elementos al carrito
     const addItem = (item, quantity) => {
         const producto = cart.find (element => element.item === item);
         if (producto) {
@@ -24,15 +25,19 @@ export const CartContextComponent = ({children}) => {
         setCountState(false)
     }
 
+    // Eliminar elementos y vaciar el carrito
     const removeItem = (item) => {
-        let itemsToStay = cart.filter(element => element.item !== item)
-        setCart(itemsToStay)
+        let itemsToStay = cart.filter(element => element.item !== item);
+        setCart(itemsToStay);
+        if (cart.length <= 1) {localStorage.clear()}
     }
 
     const clearCart = () => {
         setCart([])
+        localStorage.clear()
     }
 
+    // Actualizar precio y cantidad de items del carrito
     useEffect ( () => {
         let price = 0
         for (let producto of cart) {
@@ -52,6 +57,16 @@ export const CartContextComponent = ({children}) => {
             setCartLength(cartLength)
         )
     }, [cart])
+
+    // Almacenamiento del carrito en Local Storage    
+    useEffect ( () => {
+        if (cart.length > 0) localStorage.setItem("cart", JSON.stringify(cart)) 
+    }, [cart])
+   
+    useEffect ( () => {
+        let savedCart = JSON.parse(localStorage.getItem("cart"));
+        if (savedCart) setCart(savedCart)
+    }, [])
 
     return (
     <CartContext.Provider value={{cart, price, cartLength, countState, setCountState, addItem, removeItem, clearCart}}>
