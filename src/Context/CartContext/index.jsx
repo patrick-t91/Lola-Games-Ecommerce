@@ -1,5 +1,4 @@
-import { createContext } from 'react'
-import { useState, useEffect } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 
@@ -9,9 +8,9 @@ export const CartContextComponent = ({children}) => {
     const [cartLength, setCartLength] = useState(0)
     const [countState, setCountState] = useState(true)
 
-    // Agregar elementos al carrito
+    // Agregar y eliminar elementos del carrito y vaciar carrito
     const addItem = (item, quantity) => {
-        const producto = cart.find (element => element.item === item);
+        const producto = cart.find (element => element.item.id === item.id);
         if (producto) {
             producto.quantity+= quantity;
             setCart([...cart])
@@ -25,7 +24,10 @@ export const CartContextComponent = ({children}) => {
         setCountState(false)
     }
 
-    // Eliminar elementos y vaciar el carrito
+    useEffect (() => {
+        setCountState(true)
+    }, [])
+
     const removeItem = (item) => {
         let itemsToStay = cart.filter(element => element.item !== item);
         setCart(itemsToStay);
@@ -65,6 +67,7 @@ export const CartContextComponent = ({children}) => {
    
     useEffect ( () => {
         let savedCart = JSON.parse(localStorage.getItem("cart"));
+        console.log(savedCart)
         if (savedCart) setCart(savedCart)
     }, [])
 
