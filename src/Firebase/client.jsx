@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import '@firebase/firestore';
 
-const firebaseConfig = firebase.initializeApp( {
+const firebaseConfig = firebase.initializeApp({
     apiKey: "AIzaSyDwfO3O1eSy6i53grvnqjB6tKUAfDhgfts",
     authDomain: "lola-games-e-commerce.firebaseapp.com",
     projectId: "lola-games-e-commerce",
