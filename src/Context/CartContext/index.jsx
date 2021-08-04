@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 export const CartContext = createContext()
 
@@ -7,7 +8,7 @@ export const CartContextComponent = ({children}) => {
     const [price, setPrice] = useState (0)
     const [cartLength, setCartLength] = useState(0)
     const [countState, setCountState] = useState(true)
-
+    const history = useHistory()
     // Agregar y eliminar elementos del carrito y vaciar carrito
     const addItem = (item, quantity) => {
         const producto = cart.find (element => element.item.id === item.id);
@@ -26,7 +27,7 @@ export const CartContextComponent = ({children}) => {
 
     useEffect (() => {
         setCountState(true)
-    }, [])
+    }, [history])
 
     const removeItem = (item) => {
         let itemsToStay = cart.filter(element => element.item !== item);
@@ -67,7 +68,6 @@ export const CartContextComponent = ({children}) => {
    
     useEffect ( () => {
         let savedCart = JSON.parse(localStorage.getItem("cart"));
-        console.log(savedCart)
         if (savedCart) setCart(savedCart)
     }, [])
 
