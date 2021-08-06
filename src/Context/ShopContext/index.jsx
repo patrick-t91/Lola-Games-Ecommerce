@@ -9,8 +9,8 @@ export const ShopContextComponent = ({children}) => {
     useEffect( () => {
         async function getData() {
             const dataBase = getFirestore(); // Conexion a la base de datos
-            const products = await dataBase.collection("productos").get(); // Tomar la coleccion de productos
-            setProducts(products.docs.map(element => element.data()));
+            const response = await dataBase.collection("productos").get(); // Tomar la coleccion de productos
+            setProducts(response.docs.map(element => element.data()));
         }
         getData();
     }, [])

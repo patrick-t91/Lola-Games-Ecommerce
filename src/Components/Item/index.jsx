@@ -6,10 +6,10 @@ import './estilos.css'
     return (
         <div key={item.id} className="itemclass"> 
             <div className="text-center">
-                    <img src={item.img} alt="imagen-producto" className="img-productos"/>
+                    <img src={item.img} alt="imagen-producto" className="img-productos h-50 w-75"/>
             </div>
-            <h2>{item.producto}</h2>
-            <h3>Precio: $ {item.precio}</h3>
+            <h2>{item.Producto}</h2>
+            <h3>Precio: $ {item.Precio}</h3>
             <div className="text-center">
                 <Link to={`/item/${item.id}`} className="link">Ver producto</Link>
             </div>
