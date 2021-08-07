@@ -1,0 +1,19 @@
+h2, .carrito {
+    font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+    background-color:  #8b1626;
+    color: #ffffff;
+}
+
+button {
+    border-radius: 28px;
+    border: 0px;
+}
+
+.orden {
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+}
+
+.link {
+    text-decoration: none;
+}

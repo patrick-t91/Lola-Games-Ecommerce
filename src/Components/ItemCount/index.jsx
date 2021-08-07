@@ -1,8 +1,10 @@
 import { useState } from 'react';
-
+import './styles.css'
  
 export const ItemCount = ({stock, initial, addItem, item}) => {
     const [counter, setCounter] = useState(initial)
+    const [btnColor, setBtnColor] = useState ('#000000')
+    const [btnBckColor, setBtnBckColor] = useState ('#ffffff')
 
     const addHandler = () => {
         setCounter(counter + 1)
@@ -20,7 +22,9 @@ export const ItemCount = ({stock, initial, addItem, item}) => {
                 <button onClick={() => {stock && stock > counter ? addHandler () : alert("No hay más stock disponible de este producto")}}>+</button>
             </div>
             <div className="text-center">
-                <button type="submit" onClick={() => {addItem(item, counter)}}> Agregar al carrito </button>
+                <button type="submit" className="btn-principal" style={{color: btnColor, backgroundColor: btnBckColor}} onClick={() => {addItem(item, counter)}}  onMouseOver={() => {setBtnColor('#ffffff'); setBtnBckColor('#000000')}}
+                onMouseLeave={() => {setBtnColor('#000000'); setBtnBckColor('#ffffff')}}> Agregar al carrito 
+                </button>
             </div>
         </>
     )
