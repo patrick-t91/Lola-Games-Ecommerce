@@ -2,14 +2,24 @@ import { useContext } from 'react';
 import { useParams } from 'react-router-dom'
 import { ItemList } from '../../Components/ItemList/index.jsx'
 import { ShopContext } from '../../Context/ShopContext'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 export const ItemListContainer = () => {
-    const {products}= useContext (ShopContext)
-    const  { categoryId } = useParams()
+    const {products, loading}= useContext (ShopContext)
+    const  { category } = useParams()
 
     return (
-        <ItemList productos={ categoryId ? 
-                            products.filter(item => item.categoryId === categoryId)
-                            : products}/>
+        <>
+        {   loading ?
+            <div className="text-center">
+                <ClipLoader loading={loading} color={'red'} size={160} font-weight={'bolder'}/>
+                <div className="fw-bolder">Cargando productos...</div>
+            </div>
+            :
+            <ItemList productos={ category ? 
+            products.filter(item => item.Categoria === category)
+            : products}/>
+        }
+        </>
     )    
 }

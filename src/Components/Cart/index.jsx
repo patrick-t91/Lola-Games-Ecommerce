@@ -12,7 +12,7 @@ export const Cart = () => {
                     <div key={element.item.id}>
                         <div>Producto: {element.item.producto}</div>
                         <div>Cantidad: {element.quantity}</div>
-                        <div><Link to={`item/${element.item.id}`}>Ver producto</Link></div>
+                        <div><Link to={`producto/${element.item.id}`}>Ver producto</Link></div>
                         <button onClick={() => {addItem(element.item, 1)}}>Agregar más unidades de este producto</button>
                         <button onClick={() => {removeItem(element.item)}}>Eliminar producto</button>
                     </div>)}

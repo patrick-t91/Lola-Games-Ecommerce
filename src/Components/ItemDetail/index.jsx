@@ -15,20 +15,20 @@ import './styles.css'
                     <img src={item.img} alt="imagen-producto" className="img-productos img-fluid"/>
                 </div>
                 <div className="col itemDescription p-2">
-                    <h2>{item.producto}</h2>
-                    <p className="fs-4">Precio: $ {item.precio}</p>
-                    <p className="fs-4">Stock: {item.stock} unidades</p>
+                    <h2>{item.Producto}</h2>
+                    <p className="fs-4">Precio: $ {item.Precio}</p>
+                    <p className="fs-4">Stock: {item.Stock} unidades</p>
                     <div className="border border-dark border-1 mb-2 bg-light">
                         <h3>Características del producto</h3>
-                        <p>{item.descripcion}</p>
+                        <p>{item.Description}</p>
                     </div>
                     <div>
                         {countState ? 
-                        <ItemCount stock={item.stock} initial={1} addItem= {addItem} item={item}/> 
+                        <ItemCount stock={item.Stock} initial={1} addItem= {addItem} item={item}/> 
                         : 
                         <>
                             <Link to={'/cart'} onClick={() => {setCountState(true)}}>Finalizar compra</Link>
-                            <Link to={`/category/${item.categoryId}`} onClick={() => {setCountState(true)}}>Ver productos similares</Link>
+                            <Link to={`/category/${item.Categoria}`} onClick={() => {setCountState(true)}}>Ver productos similares</Link>
                         </>
                             }
                     </div> 

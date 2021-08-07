@@ -10,12 +10,12 @@ export const ItemDetailContainer = () => {
 
     useEffect ( ()  => {
         const getProductToShow = () => {
-            setProductToShow (products.find (product => product.id === parseInt(id))) 
+            setProductToShow (products.find (product => product.id === id)) 
         }
         getProductToShow ()
     }, [id, products])
     
     return (
-        <ItemDetail item= {productToShow}/>
+            <ItemDetail item= {productToShow}/>
     )    
 }

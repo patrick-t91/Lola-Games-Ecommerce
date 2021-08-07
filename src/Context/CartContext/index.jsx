@@ -9,6 +9,7 @@ export const CartContextComponent = ({children}) => {
     const [cartLength, setCartLength] = useState(0)
     const [countState, setCountState] = useState(true)
     const history = useHistory()
+
     // Agregar y eliminar elementos del carrito y vaciar carrito
     const addItem = (item, quantity) => {
         const producto = cart.find (element => element.item.id === item.id);

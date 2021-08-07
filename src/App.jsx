@@ -18,8 +18,8 @@ const App = () => {
           <Header />
           <Switch>
             <Route exact path="/" component={ItemListContainer}/>
-            <Route path="/category/:categoryId" component={ItemListContainer}/>
-            <Route path="/item/:id" component={ItemDetailContainer}/>
+            <Route path="/category/:category" component={ItemListContainer}/>
+            <Route path="/producto/:id" component={ItemDetailContainer}/>
             <Route path="/cart" component={Cart}/>
           </Switch> 
           <Footer /> 
