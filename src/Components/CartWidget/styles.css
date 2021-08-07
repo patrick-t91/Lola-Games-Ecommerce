@@ -3,3 +3,8 @@ img {
     margin-right: 2em;
     margin-bottom: 1em;
 }
+
+.link {
+    text-decoration: none;
+    color: #8b1626;
+}

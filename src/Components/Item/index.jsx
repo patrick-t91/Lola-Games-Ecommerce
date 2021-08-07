@@ -4,7 +4,7 @@ import './styles.css'
 
 
  export const Item = ({producto}) => {
-    const [color, setColor] = useState('#ffffff')
+    const [color, setColor] = useState('#8b1626')
     const [colorCat, setColorCat] = useState('#ffffff')
 
     return (
@@ -21,10 +21,10 @@ import './styles.css'
                     <div className="text-center">
                         <img src={producto.img} alt="imagen-producto" className="img-productos h-25 w-50"/>
                     </div>
-                    <h3 style={{color: color}} onMouseOver={() => {setColor('#8b1626')}} 
-                    onMouseLeave={() => {setColor('#ffffff')}} className="fs-5">{producto.Producto}</h3>
-                    <h3 style={{color: color}} onMouseOver={() => {setColor('#8b1626')}} 
-                    onMouseLeave={() => {setColor('#ffffff')}} className="fs-6">Precio: $ {producto.Precio}</h3>
+                    <h3 style={{color: color}} onMouseLeave={() => {setColor('#8b1626')}} 
+                    onMouseOver={() => {setColor('#ffffff')}} className="fs-5">{producto.Producto}</h3>
+                    <h3 style={{color: color}} onMouseLeave={() => {setColor('#8b1626')}} 
+                    onMouseOver={() => {setColor('#ffffff')}} className="fs-6">Precio: $ {producto.Precio}</h3>
                 </Link>
             </div>
         </div>  
