@@ -14,14 +14,13 @@ export const ItemDetailContainer = () => {
                 const response = await productsCollection.where('id', '==', id).get()
                 const product = response.docs.map(element => element.data())
                 setProductToShow(product[0])
-                
             }
         getProduct();
     }, [id, productToShow])
     
     return (
         <>
-            <ItemDetail item= {productToShow}/>
+           <ItemDetail item= {productToShow}/>
         </>
     )    
 }
