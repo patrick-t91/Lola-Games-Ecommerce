@@ -7,7 +7,7 @@ import "./styles.css";
 export const Cart = () => {
   const {
     clearCart,
-    price,
+    totalPrice,
     cartLength,
     setCountState,
     cart
@@ -30,7 +30,7 @@ export const Cart = () => {
       })}
       </span>
       <div>Total de productos en el carrito: {cartLength}</div>
-      <div>Precio total de tu compra: $ {price}</div>
+      <div>Precio total de tu compra: $ {totalPrice}</div>
       <button
         style={{ color: btnClearColor, backgroundColor: btnClearBckColor }}
         onClick={() => {
