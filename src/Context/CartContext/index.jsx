@@ -87,6 +87,8 @@ export const CartContextComponent = ({ children }) => {
     dataBase
       .collection("orders")
       .add(order)
+      .then(id => console.log(id))
+
         cart.forEach((element) => batch.update(products.doc(element.item.id), { Stock: element.item.Stock - element.quantity}));
   };
   return (
