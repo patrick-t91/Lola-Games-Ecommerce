@@ -50,7 +50,7 @@ export const ItemDetail = ({ item }) => {
                       item={item}
                     />
                   : 
-                    <>
+                    <div className="d-flex justify-content-between">
                       <Link
                         className="link"
                         to={"/cart"}
@@ -69,7 +69,7 @@ export const ItemDetail = ({ item }) => {
                       >
                         Ver productos similares
                       </Link>
-                    </>
+                    </div>
                     )
                   : null
             }

@@ -12,9 +12,9 @@ export const CartProduct = ({element}) => {
     return (
             <>  
             <div className="d-flex b-2 text-center border border-top-1 border-bottom-1 border-light">
-            <span className="orden fs-3">{cart.indexOf(element) + 1}</span>
+            <span className="orden fs-3 m-3 ">{cart.indexOf(element) + 1}</span>
             <span key={element.item.id}>
-              <div>Producto: {element.item.Producto}</div>
+              <div>{element.item.Producto}</div>
               <img
                 src={element.item.img}
                 alt="imagen-producto"
@@ -62,7 +62,7 @@ export const CartProduct = ({element}) => {
                 Eliminar producto
                 </button>
               <div>
-                  <Link to={`producto/${element.item.id}`} className="link">
+                  <Link to={`producto/${element.item.id}`} className="link bg-light">
                     Ver producto
                   </Link>
                 </div>

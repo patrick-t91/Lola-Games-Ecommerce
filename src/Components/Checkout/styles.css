@@ -1,9 +1,3 @@
-h2, .carrito {
-    font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
-    background-color:  #8b1626;
-    color: #ffffff;
-}
-
 div {
     font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
 }
@@ -12,8 +6,4 @@ button {
     font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
     border-radius: 28px;
     border: 0px;
-}
-
-.link {
-    text-decoration: none;
 }
