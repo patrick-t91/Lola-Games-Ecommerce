@@ -45,7 +45,7 @@ export const CartContextComponent = ({children}) => {
     useEffect ( () => {
         let price = 0
         for (let producto of cart) {
-                price += producto.item.Precio*producto.quantity
+                price += producto.item.Precio*parseInt(producto.quantity)
             }
         return (
             setPrice(price)

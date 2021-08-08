@@ -13,3 +13,12 @@
    display: grid;
 }
 
+.link {
+    text-decoration: none;
+    color: #c23616;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #000000;
+}

@@ -11,8 +11,6 @@ export const NavBar = () => {
                 <li><Link to={'/category/Juegos'} className="link">Juegos</ Link></li>
                 <li><Link to={'/category/Consolas'} className="link">Consolas y equipos</ Link></li>                   
                 <li><Link to={'/category/Accesorios'} className="link">Accesorios</ Link></li>    
-                <li><Link className="link" to={"/"}> Acerca de nosotros</Link></li>
-                <li><Link className="link" to={"/"}>Contactanos</Link></li>
             </ul>
             <CartWidget />
         </nav>     

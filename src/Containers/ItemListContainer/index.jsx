@@ -5,9 +5,9 @@ import { ShopContext } from '../../Context/ShopContext'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 export const ItemListContainer = () => {
-    const {products, loading}= useContext (ShopContext)
+    const {products, loading} = useContext (ShopContext)
     const  { category } = useParams()
-
+    
     return (
         <>
         {   loading ?

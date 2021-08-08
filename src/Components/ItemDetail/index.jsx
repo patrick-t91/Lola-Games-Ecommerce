@@ -27,8 +27,8 @@ import './styles.css'
                         <ItemCount stock={item.Stock} initial={1} addItem= {addItem} item={item}/> 
                         : 
                         <>
-                            <Link to={'/cart'} onClick={() => {setCountState(true)}}>Finalizar compra</Link>
-                            <Link to={`/category/${item.Categoria}`} onClick={() => {setCountState(true)}}>Ver productos similares</Link>
+                            <Link className="link" to={'/cart'} onClick={() => {setCountState(true)}}>Finalizar compra</Link>
+                            <Link className="link" to={`/category/${item.Categoria}`} onClick={() => {setCountState(true)}}>Ver productos similares</Link>
                         </>
                             }
                     </div> 
