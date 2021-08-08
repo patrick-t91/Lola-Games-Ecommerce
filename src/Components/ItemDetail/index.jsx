@@ -8,7 +8,6 @@ import './styles.css'
     const {addItem, countState, setCountState} = useContext(CartContext)
     
     return (
-        !!item &&
         <div className="itemClass container border border-dark border-2">
             <div className="row">
                 <div className="col">
