@@ -1,7 +1,8 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ProductsContextComponent } from '../../Context/ProductsContext'
 import { CartContextComponent } from './Context/CartContext';
 import { Header } from './Components/Header';
 import { ItemListContainer } from './Containers/ItemListContainer';
@@ -12,6 +13,7 @@ import { Footer } from './Components/Footer';
 
 const App = () => { 
     return (
+      <ProductsContextComponent>
       <CartContextComponent>
         <BrowserRouter>
           <Header />
@@ -25,6 +27,7 @@ const App = () => {
           <Footer /> 
         </BrowserRouter>
       </CartContextComponent> 
+      </ProductsContextComponent>
   )
 }
 

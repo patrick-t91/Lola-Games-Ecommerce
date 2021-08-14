@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "./styles.scss";
 
 export const Item = ({ producto }) => {
   const [color, setColor] = useState("#8b1626");
@@ -29,7 +29,7 @@ export const Item = ({ producto }) => {
             <img
               src={producto.img}
               alt="imagen-producto"
-              className="img-productos h-25 w-50"
+              className="h-25 w-50"
             />
           </div>
           <h3

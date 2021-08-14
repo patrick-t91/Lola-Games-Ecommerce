@@ -2,29 +2,30 @@
     display: flex;
     justify-content: space-between;
     font-size: small;
+    .App-logo {
+        height: 3em;
+        width: 6em;
+      }
 }
+
 .navlist {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    li {
+  
+        padding-right: 1em;
+        padding-left: 1em;
+    }
 }
+
 .navinput {
     margin-bottom: 0;
-}
-.navlist li {
-  
-    padding-right: 1em;
-    padding-left: 1em;
 }
 
 .link {
     text-decoration: none;
     color: #c23616;
     font-weight: bold;
-}
-
-.navmenu .App-logo {
-  height: 3em;
-  width: 6em;
 }
