@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ItemCount } from "../ItemCount";
 import { CartContext } from "../../Context/CartContext";
-import "./styles.css";
+import "./styles.scss";
 
 export const ItemDetail = ({ item }) => {
   const { addItem, countState, setCountState } = useContext(CartContext);

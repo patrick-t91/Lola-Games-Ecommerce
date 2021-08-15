@@ -1,19 +1,34 @@
-import { useContext, useState } from 'react';
-import { ProductsContextComponent } from '../../Context/ProductsContext'
+import { useContext } from "react";
+import { ProductsContext } from "../../Context/ProductsContext";
+import searchIcon from '../../media/search.jpg'
 
 export const SearchInput = () => {
-    const { productos } = useContext(ProductsContextComponent)
-    const [value, setValue] = useState()
+  const { productos, value, setValue, filterProducts, productosFiltrados } = useContext(ProductsContext);
 
-    const filterProducts = () => {
-        return productos.filter(
-          (producto) =>
-            (producto.Producto.toLowerCase() || producto.Categoria.toLowerCase() || producto.Description.toLowerCase())
-              .includes(value)
-        );
-      };
-
-    return (
-        <input placeholder="Buscar producto" onInput={(e) => {setValue(e); filterProducts()}}/>
-    )
-}
+  return (
+    <>
+      <input
+        type="text"
+        placeholder="Buscar producto"
+        value={value}
+        onInput={(e) => {
+          setValue(e.target.value);
+          filterProducts(productos, value);
+          console.log(e.target.value)
+          console.log(value.length)
+          console.log(productosFiltrados)
+        }}
+        className="m-0"
+      />
+      <button
+        type="button"
+        onClick={() => {
+          filterProducts(productos, value)
+          }
+        }
+      >
+        <img src={searchIcon} alt="searchIcon" className="m-0"/>
+      </button>
+    </>
+  );
+};

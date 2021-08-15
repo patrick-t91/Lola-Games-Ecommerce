@@ -28,7 +28,9 @@ export const CartProduct = ({element}) => {
                     backgroundColor: btnAddBckColor,
                 }}
                 onClick={() => {
-                    addItem(element.item, 1);
+                    element.item.Stock > element.quantity ?
+                    addItem(element.item, 1)
+                    : alert('No hay más stock de este producto')
                 }}
                 onMouseOver={() => {
                     setBtnAddColor("#ffffff");

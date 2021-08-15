@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import { ProductsContext } from '../../Context/ProductsContext'
+import { ProductsContext } from "../../Context/ProductsContext";
 import { getFirestore } from "../../Firebase/client.jsx";
 import { ItemList } from "../../Components/ItemList/index.jsx";
 
@@ -9,7 +9,7 @@ export const ItemListContainer = () => {
   const { category } = useParams();
   const [loading, setLoading] = useState();
   const [products, setProducts] = useState([]);
-  const { productos } = useContext(ProductsContext);
+  const { productos, productosFiltrados, value } = useContext(ProductsContext);
 
   useEffect(() => {
     setLoading(true);
@@ -27,10 +27,10 @@ export const ItemListContainer = () => {
           setLoading(false);
         }
       } else {
-          setProducts(productos);
-          setLoading(false);
-        }
+        setProducts(productos);
+        setLoading(false);
       }
+    }
     getData();
   }, [category, productos]);
 
@@ -47,7 +47,11 @@ export const ItemListContainer = () => {
           <div className="fw-bolder">Cargando productos...</div>
         </div>
       ) : (
-        <ItemList productos={products} />
+        <ItemList
+          productos={
+            productosFiltrados.length > 0 && value.length > 0 ? productosFiltrados : products
+          }
+        />
       )}
     </>
   );

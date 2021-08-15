@@ -1,8 +1,8 @@
-import './styles.css'
-import cartLogo from '../../media/cart.png'
 import { useContext, useState } from 'react';
 import { CartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
+import './styles.css'
+import cartLogo from '../../media/cart.png'
 
 export const CartWidget = () => {
     const { cartLength } = useContext(CartContext)
@@ -20,7 +20,5 @@ export const CartWidget = () => {
             : null
             }
         </>
-
-               
     )
 }
