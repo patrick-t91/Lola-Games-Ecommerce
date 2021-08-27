@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { getFirestore } from "../../Firebase/client.jsx";
 
 export const CartContext = createContext();
@@ -9,7 +8,7 @@ export const CartContextComponent = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [cartLength, setCartLength] = useState(0);
   const [countState, setCountState] = useState(true);
-  const history = useHistory();
+
 
   // Manipulación de elementos del carrito
   const addItem = (item, quantity) => {
@@ -30,9 +29,7 @@ export const CartContextComponent = ({ children }) => {
     setCountState(false);
   };
 
-  useEffect(() => {
-    setCountState(true);
-  }, [history]);
+
 
   const removeItem = (item) => {
     let itemsToStay = cart.filter((element) => element.item !== item);

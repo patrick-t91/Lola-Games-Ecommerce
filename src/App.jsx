@@ -16,7 +16,11 @@ const App = () => {
       <ProductsContextComponent>
       <CartContextComponent>
         <BrowserRouter>
-          <Header />
+          {
+            Route.path === ('/cart' || '/checkout') ?
+            null
+            : <Header />
+          }
           <Switch>
             <Route exact path="/" component={ItemListContainer}/>
             <Route path="/category/:category" component={ItemListContainer}/>
@@ -28,6 +32,7 @@ const App = () => {
         </BrowserRouter>
       </CartContextComponent> 
       </ProductsContextComponent>
+      
   )
 }
 

@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import { ProductsContext } from "../../Context/ProductsContext";
+import { CartContext } from '../../Context/CartContext'
 import { getFirestore } from "../../Firebase/client.jsx";
 import { ItemList } from "../../Components/ItemList/index.jsx";
 
@@ -10,6 +11,7 @@ export const ItemListContainer = () => {
   const [loading, setLoading] = useState();
   const [products, setProducts] = useState([]);
   const { productos, productosFiltrados, value } = useContext(ProductsContext);
+  const { setCountState } = useContext(CartContext);
 
   useEffect(() => {
     setLoading(true);
@@ -33,6 +35,10 @@ export const ItemListContainer = () => {
     }
     getData();
   }, [category, productos]);
+
+  useEffect (() => {
+      setCountState(true);
+    }, [category, setCountState]);
 
   return (
     <>

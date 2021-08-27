@@ -15,14 +15,11 @@ export const ItemDetail = ({ item }) => {
 
   return (
     <div className="itemClass container border border-dark border-2">
-      <div className="row">
-        <div className="col">
           <img
             src={item.img}
             alt="imagen-producto"
             className="img-productos img-fluid"
           />
-        </div>
         <div className="col itemDescription p-2">
           <h2>{item.Producto}</h2>
           <p className="fs-4 text-light">Precio: $ {item.Precio}</p>
@@ -76,7 +73,7 @@ export const ItemDetail = ({ item }) => {
             
           </div>
         </div>
-      </div>
+  
     </div>
   );
 };
