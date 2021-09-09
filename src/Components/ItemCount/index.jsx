@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles.css";
+import "./styles.scss";
 
 export const ItemCount = ({ stock, initial, addItem, item }) => {
   const [counter, setCounter] = useState(initial);
@@ -17,7 +17,7 @@ export const ItemCount = ({ stock, initial, addItem, item }) => {
   };
 
   return (
-    <>
+    <div className="container">
       <div className="text-center margin mb-2">
         <button
           onClick={() => {
@@ -59,6 +59,6 @@ export const ItemCount = ({ stock, initial, addItem, item }) => {
           Agregar al carrito{" "}
         </button>
       </div>
-    </>
+    </div>
   );
 };

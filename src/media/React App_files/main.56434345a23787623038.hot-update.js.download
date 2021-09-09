@@ -1,0 +1,26 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Product/styles.scss":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--5-oneOf-6-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./src/components/Product/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".product-container {\n  margin: 5%;\n  padding: 5%;\n  background-color: #ffffff; }\n  .product-container img {\n    max-width: 100%; }\n  .product-container h3 {\n    font-size: smaller;\n    background-color: #ffffff;\n    text-align: left;\n    margin-bottom: 5%; }\n  .product-container h4 {\n    background-color: #ffffff;\n    text-align: left;\n    margin: 0; }\n  .product-container .precio-antes {\n    opacity: 0.4;\n    font-size: x-small; }\n", "",{"version":3,"sources":["webpack://src/components/Product/styles.scss"],"names":[],"mappings":"AAAA;EACI,UAAU;EACV,WAAW;EACX,yBAAyB,EAAA;EAH7B;IAKQ,eAAc,EAAA;EALtB;IAQQ,kBAAkB;IAClB,yBAAyB;IACzB,gBAAgB;IAChB,iBAAiB,EAAA;EAXzB;IAcQ,yBAAyB;IACzB,gBAAgB;IAChB,SAAS,EAAA;EAhBjB;IAmBQ,YAAY;IACZ,kBAAkB,EAAA","sourcesContent":[".product-container {\r\n    margin: 5%;\r\n    padding: 5%;\r\n    background-color: #ffffff;\r\n    img {\r\n        max-width:100%;\r\n    }\r\n    h3 {\r\n        font-size: smaller;\r\n        background-color: #ffffff;\r\n        text-align: left;\r\n        margin-bottom: 5%;\r\n    } \r\n    h4 {\r\n        background-color: #ffffff;\r\n        text-align: left;\r\n        margin: 0;\r\n    }\r\n    .precio-antes {\r\n        opacity: 0.4;\r\n        font-size: x-small;\r\n    }\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ })
+
+})
+//# sourceMappingURL=main.56434345a23787623038.hot-update.js.map
