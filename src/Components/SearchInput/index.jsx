@@ -15,7 +15,7 @@ export const SearchInput = () => {
         value={value}
         onInput={(e) => {
           setValue(e.target.value);
-          filterProducts(productos, value);
+          filterProducts(productos, value)
           console.log(e.target.value);
           console.log(value.length);
           console.log(productosFiltrados);
