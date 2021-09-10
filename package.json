@@ -1,8 +1,8 @@
 {
-  "homepage": "https://patrick-t91.github.io/",
   "name": "nombre-de-appcd",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://patrick-t91.github.io/Lola-Games-Ecommerce",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -22,12 +22,12 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
