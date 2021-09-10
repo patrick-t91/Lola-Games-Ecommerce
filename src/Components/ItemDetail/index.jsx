@@ -14,7 +14,7 @@ export const ItemDetail = ({ item }) => {
   }, [item.Stock])
 
   return (
-    <div className="itemClass container border border-dark border-2">
+    <div className="itemDetailClass container border border-dark border-2">
           <img
             src={item.img}
             alt="imagen-producto"

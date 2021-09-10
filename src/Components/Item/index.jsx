@@ -7,7 +7,7 @@ export const Item = ({ producto }) => {
   const [colorCat, setColorCat] = useState("#ffffff");
 
   return (
-    <div key={producto.id} className="itemclass">
+    <div key={producto.id} className="itemClass">
       <Link to={`/category/${producto.Categoria}`} className="link">
         <h4
           style={{ color: colorCat }}
