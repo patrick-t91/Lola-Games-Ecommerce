@@ -18,7 +18,7 @@ const App = () => {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route exact path="/" component={ItemListContainer}/>
+            <Route exact path="/Lola-Games-Ecommerce" component={ItemListContainer}/>
             <Route path="/category/:category" component={ItemListContainer}/>
             <Route path="/producto/:id" component={ItemDetailContainer}/>
             <Route path="/cart" component={Cart}/>
