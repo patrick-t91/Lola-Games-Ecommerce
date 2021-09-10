@@ -17,8 +17,8 @@ export const ItemCount = ({ stock, initial, addItem, item }) => {
   };
 
   return (
-    <div className="container">
-      <div className="text-center margin mb-2">
+    <div className="itemCountContainer">
+      <div className="itemCountSup text-center">
         <button
           onClick={() => {
             substractHandler()
@@ -26,9 +26,9 @@ export const ItemCount = ({ stock, initial, addItem, item }) => {
         >
           -
         </button>
-        <span className="border border-dark border-2 margin ms-1 me-1 padding p-1 bg-light">
-          Cantidad de este producto en el carrito: {counter}
-        </span>
+        <div className="border border-dark border-2 p-1 bg-light">
+          Cantidad: {counter}
+        </div>
         <button
           onClick={() => {
             stock && stock > counter

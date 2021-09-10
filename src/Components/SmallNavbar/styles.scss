@@ -1,0 +1,45 @@
+.smallNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  .appLogo {
+      height: 4em
+  }
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  li {
+    padding: 0 2% 0;
+  }
+  .navLink {
+    font-size: medium;
+    text-decoration: none;
+    color: #c23616;
+    font-weight: bolder;
+  }
+  .navLink:hover {
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .smallNav {
+        .appLogo {
+            height: 2em
+        }
+        .navInput {
+            align-self: center;
+            padding: 0 3% 0;
+        }
+      .navlist {
+        li {
+          padding: 0 5% 0;
+        }
+      }
+    }
+  }

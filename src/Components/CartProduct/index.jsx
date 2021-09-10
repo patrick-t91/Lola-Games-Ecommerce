@@ -16,7 +16,7 @@ export const CartProduct = ({ element }) => {
     <>
       <div className="d-flex justify-content-center b-2 p-2 border border-top-1 border-bottom-1 border-light">
         <span className="orden fs-3 m-3 ">{cart.indexOf(element) + 1}</span>
-        <span key={element.item.id}>
+        <span>
           <div>{element.item.Producto}</div>
           <img
             src={element.item.img}
@@ -66,8 +66,8 @@ export const CartProduct = ({ element }) => {
           >
             Eliminar producto
           </button>
-          <div>
-            <Link to={`producto/${element.item.id}`} className="link">
+          <div className="seeProduct">
+            <Link to={`producto/${element.item.id}`} className="seeLink">
               <button
                 className="linkBtn"
                 style={{

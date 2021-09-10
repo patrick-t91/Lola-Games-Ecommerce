@@ -1,14 +1,13 @@
-import { NavBar } from '../NavBar';
-import './styles.css'
-
+import { NavBar } from "../NavBar";
+import "./styles.scss";
 
 export const Header = () => {
-    return (
-    <header className="App-header p-2">
-        <NavBar/>
-        <div>
-        <h1 className="title text-center">Lola Games</h1>
-        </div> 
+  return (
+    <header className="appHeader p-1">
+      <NavBar />
+      <span>
+        <h1 className="title text-center">Lola Games </h1>  
+      </span>
     </header>
-  )
-}
+  );
+};

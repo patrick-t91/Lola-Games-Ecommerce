@@ -22,7 +22,7 @@ export const Cart = () => {
           <h2 className="text-center fs-2">Detalle de tu compra</h2>
           <span className="carrito ">
             {cart.map((element) => {
-              return <CartProduct element={element} />;
+              return <CartProduct key={element.item.id} element={element} />;
             })}
           </span>
           <div className="pb-2">
@@ -77,7 +77,7 @@ export const Cart = () => {
                 onClick={() => {
                   setCountState(true);
                 }}
-                className="link m-4 bg-light"
+                className="seeLink m-4 bg-light"
               >
                 <button
                   style={{

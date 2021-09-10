@@ -23,6 +23,9 @@ const App = () => {
             <Route path="/producto/:id" component={ItemDetailContainer}/>
             <Route path="/cart" component={Cart}/>
             <Route path='/checkout' component={Checkout}/>
+            <Route path='/instagram' component={() => window.location = 'https://www.instagram.com/lola.games.flores/'}/>
+            <Route path='/facebook' component={() => window.location = 'https://www.facebook.com'}/>
+            <Route path='/whatsapp' component={() => window.location = 'https://www.whatsapp.com'}/>
           </Switch> 
           <Footer /> 
         </BrowserRouter>
