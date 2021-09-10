@@ -8,7 +8,7 @@ export const SmallNavbar = () => {
   return (
     <nav>
       <div className="smallNav">
-        <Link to={"/"}>
+        <Link to={"/Lola-Games-Ecommerce"}>
           <img src={logo} alt="logo" className="appLogo" />
         </Link>
         <div className="navInput">

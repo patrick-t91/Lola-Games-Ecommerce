@@ -19,7 +19,7 @@ export const NavBar = () => {
 
   return screenWidth > 600 ? (
     <nav className="navmenu">
-      <Link to={"/"}>
+      <Link to={"/Lola-Games-Ecommerce"}>
         <img src={logo} alt="logo" className="appLogo" />
       </Link>
       <ul className="navlist">
