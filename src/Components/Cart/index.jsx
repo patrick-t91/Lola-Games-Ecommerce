@@ -73,7 +73,7 @@ export const Cart = () => {
             </span>
             <div>
               <Link
-                to="/"
+                to="/Lola-Games-Ecommerce"
                 onClick={() => {
                   setCountState(true);
                 }}
