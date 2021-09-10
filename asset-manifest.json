@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Lola-Games-Ecommerce/static/css/main.bcdff054.chunk.css",
+    "main.js": "/Lola-Games-Ecommerce/static/js/main.28c5e45f.chunk.js",
+    "main.js.map": "/Lola-Games-Ecommerce/static/js/main.28c5e45f.chunk.js.map",
+    "runtime-main.js": "/Lola-Games-Ecommerce/static/js/runtime-main.0d4aa644.js",
+    "runtime-main.js.map": "/Lola-Games-Ecommerce/static/js/runtime-main.0d4aa644.js.map",
+    "static/css/2.818011ed.chunk.css": "/Lola-Games-Ecommerce/static/css/2.818011ed.chunk.css",
+    "static/js/2.dc80131c.chunk.js": "/Lola-Games-Ecommerce/static/js/2.dc80131c.chunk.js",
+    "static/js/2.dc80131c.chunk.js.map": "/Lola-Games-Ecommerce/static/js/2.dc80131c.chunk.js.map",
+    "static/js/3.a8ac609d.chunk.js": "/Lola-Games-Ecommerce/static/js/3.a8ac609d.chunk.js",
+    "static/js/3.a8ac609d.chunk.js.map": "/Lola-Games-Ecommerce/static/js/3.a8ac609d.chunk.js.map",
+    "index.html": "/Lola-Games-Ecommerce/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/Lola-Games-Ecommerce/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.bcdff054.chunk.css.map": "/Lola-Games-Ecommerce/static/css/main.bcdff054.chunk.css.map",
+    "static/js/2.dc80131c.chunk.js.LICENSE.txt": "/Lola-Games-Ecommerce/static/js/2.dc80131c.chunk.js.LICENSE.txt",
+    "static/media/facebook-logo.355201ad.png": "/Lola-Games-Ecommerce/static/media/facebook-logo.355201ad.png",
+    "static/media/instagram-logo.88e5a546.png": "/Lola-Games-Ecommerce/static/media/instagram-logo.88e5a546.png",
+    "static/media/search.0f338536.jpg": "/Lola-Games-Ecommerce/static/media/search.0f338536.jpg",
+    "static/media/whatsapp-logo.e8c2649e.png": "/Lola-Games-Ecommerce/static/media/whatsapp-logo.e8c2649e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d4aa644.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.dc80131c.chunk.js",
+    "static/css/main.bcdff054.chunk.css",
+    "static/js/main.28c5e45f.chunk.js"
+  ]
+}
